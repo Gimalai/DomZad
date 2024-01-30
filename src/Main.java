@@ -1,94 +1,87 @@
-class Main {
+public class Main {
     public static void main(String[] args) {
-        // Объявление и инициализация переменных
-        double dog = 8.0;
-        double cat = 3.6;
-        int paper = 763789;
+        //задача  1
+        double value1 = 27.12;
+        long value2 = 987_678_965_549L;
+        float value3 = 2.786f;
+        int value4 = 569;
+        short value5 = -159;
+        int value6 = 27_897;
+        byte value7 = 67;
 
-        // Использование типа переменной var для увеличения значения на 4
-        dog += 4.0;
-        cat += 4.0;
-        paper += 4;
+        System.out.println("Значение переменной value1 с типом double равно " + value1);
+        System.out.println("Значение переменной value2 с типом long равно " + value2);
+        System.out.println("Значение переменной value3 с типом float равно " + value3);
+        System.out.println("Значение переменной value4 с типом int равно " + value4);
+        System.out.println("Значение переменной value5 с типом short равно " + value5);
+        System.out.println("Значение переменной value6 с типом int равно " + value6);
+        System.out.println("Значение переменной value7 с типом byte равно " + value7);
 
-        // Уменьшение значений переменных
-        dog -= 3.5;
-        cat -= 1.6;
-        paper -= 7639;
+        //Задача 3
+        int luydmilaClassSize = 23;
+        int annaClassSize = 27;
+        int ekaterinaClassSize = 30;
+        int totalSheetsOfPaper = 480;
 
-        // Инициализация переменной friend с использованием типа var
-        var friend = 19;
+        int sheetsPerStudent = totalSheetsOfPaper / (luydmilaClassSize + annaClassSize + ekaterinaClassSize);
 
-        // Увеличение значения переменной на 2
-        friend += 2;
+        System.out.println("На каждого ученика рассчитано " + sheetsPerStudent + " листов бумаги");
 
-        // Деление на 7
-        friend /= 7;
+        // Задача 4
+        int bottlesPer2Minutes = 16;
+        int minutesPerDay = 24 * 60;
+        int minutesPer3Days = 3 * minutesPerDay;
+        int minutesPerMonth = 30 * minutesPerDay;
 
-        // Инициализация переменной frog с использованием типа var
-        var frog = 3.5;
+        int bottlesPer20Minutes = (bottlesPer2Minutes * 20) / 2;
+        int bottlesPerDay = (bottlesPer2Minutes * minutesPerDay) / 2;
+        int bottlesPer3Days = (bottlesPer2Minutes * minutesPer3Days) / 2;
+        int bottlesPerMonth = (bottlesPer2Minutes * minutesPerMonth) / 2;
 
-        // Увеличение переменной в 10 раз
-        frog *= 10;
+        System.out.println("За 20 минут машина произвела " + bottlesPer20Minutes + " штук бутылок");
+        System.out.println("За сутки машина произвела " + bottlesPerDay + " штук бутылок");
+        System.out.println("За 3 дня машина произвела " + bottlesPer3Days + " штук бутылок");
+        System.out.println("За 1 месяц машина произвела " + bottlesPerMonth + " штук бутылок");
 
-        // Деление на 3.5
-        frog /= 3.5;
+        // Задача 5
+        int totalPaintCans = 120;
+        int whitePaintCansPerClass = 2;
+        int brownPaintCansPerClass = 4;
 
-        // Добавление 4
-        frog += 4;
+        int numberOfClasses = totalPaintCans / (whitePaintCansPerClass + brownPaintCansPerClass);
+        int whitePaintCans = numberOfClasses * whitePaintCansPerClass;
+        int brownPaintCans = numberOfClasses * brownPaintCansPerClass;
 
-        // Инициализация массы боксеров с использованием типа var
-        var boxer1 = 78.2;
-        var boxer2 = 82.7;
+        System.out.println("В школе, где " + numberOfClasses + " классов, нужно " + whitePaintCans + " банок белой краски и " + brownPaintCans + " банок коричневой краски");
 
-        // Вычисление общей массы боксеров
-        var totalWeight = boxer1 + boxer2;
+        // Задача 6
+        int bananasPerRecipe = 5;
+        int milkPerRecipe = 200;
+        int iceCreamBricksPerRecipe = 2;
+        int eggsPerRecipe = 4;
+        int bananaWeight = 80;
+        int milkWeight = 105;
+        int iceCreamBrickWeight = 100;
+        int eggWeight = 70;
 
-        // Вычисление разницы в массе боксеров
-        var weightDifference = Math.abs(boxer1 - boxer2);
+        int recipeWeight = (bananasPerRecipe * bananaWeight) + (milkPerRecipe * milkWeight) + (iceCreamBricksPerRecipe * iceCreamBrickWeight) + (eggsPerRecipe * eggWeight);
+        double recipeWeightInKg = recipeWeight / 1000.0;
 
-        // Инициализация массы спортсменов с использованием типа var
-        var weight1 = 78.2;
-        var weight2 = 82.7;
+        System.out.println("Вес спортзавтрака в граммах: " + recipeWeight + " г");
+        System.out.println("Вес спортзавтрака в килограммах: " + recipeWeightInKg + " кг");
 
-        // Вычисление разницы масс спортсменов с использованием вычитания
-        var difference1 = Math.abs(weight1 - weight2);
+        // Задача 7
+        int weightLossMin = 250;
+        int weightLossMax = 500;
+        int totalWeightLoss = 7000;
 
-        // Вычисление разницы масс спортсменов с использованием остатка от деления
-        var difference2 = Math.abs(weight1 % weight2);
+        int daysMin = totalWeightLoss / weightLossMin;
+        int daysMax = totalWeightLoss / weightLossMax;
+        int daysAverage = (daysMin + daysMax) / 2;
 
-        var totalHours = 640;
-        var workHoursPerEmployee = 8;
-
-        // Вычисление общего числа сотрудников
-        var totalEmployees = totalHours / workHoursPerEmployee;
-
-        // Вывод новых значений переменных в консоль
-        System.out.println("Новое значение переменной dog: " + dog);
-        System.out.println("Новое значение переменной cat: " + cat);
-        System.out.println("Новое значение переменной paper: " + paper);
-
-        // Вывод значений переменной frog после каждой операции
-        System.out.println("Значение переменной frog после увеличения в 10 раз: " + frog);
-        System.out.println("Значение переменной frog после деления на 3.5: " + frog);
-        System.out.println("Значение переменной frog после добавления 4: " + frog);
-
-        // Вывод значений переменной friend после каждой операции
-        System.out.println("Значение переменной friend после увеличения на 2: " + friend);
-        System.out.println("Значение переменной friend после деления на 7: " + friend);
-
-        // Вывод значений переменных в консоль
-        System.out.println("Значение переменной dog: " + dog);
-        System.out.println("Значение переменной cat: " + cat);
-        System.out.println("Значение переменной paper: " + paper);
-
-        // Вывод общей массы и разницы массы в консоль
-        System.out.println("Общая масса боксеров: " + totalWeight + " кг");
-        System.out.println("Разница в массе боксеров: " + weightDifference + " кг");
-
-        // Вывод разницы масс спортсменов в консоль
-        System.out.println("Разница масс спортсменов (вычитание): " + difference1 + " кг");
-        System.out.println("Разница масс спортсменов (остаток от деления): " + difference2 + " кг");
-
-        System.out.println("Всего работников в компании — " + totalEmployees + " человек");
+        System.out.println("Дней на похудение при потере веса от 250 г: " + daysMin + " дня(ей)");
+        System.out.println("Дней на похудение при потере веса от 500 г: " + daysMax + " дня(ей)");
+        System.out.println("Дней на похудение при средней потере веса: " + daysAverage + " дня(ей)");
     }
 }
+
