@@ -61,6 +61,7 @@ public class Main {
         int eggsPerRecipe = 4;
         int bananaWeight = 80;
         int milkWeight = 105;
+        
         int iceCreamBrickWeight = 100;
         int eggWeight = 70;
 
@@ -82,6 +83,12 @@ public class Main {
         System.out.println("Дней на похудение при потере веса от 250 г: " + daysMin + " дня(ей)");
         System.out.println("Дней на похудение при потере веса от 500 г: " + daysMax + " дня(ей)");
         System.out.println("Дней на похудение при средней потере веса: " + daysAverage + " дня(ей)");
-    }
+
+        int mashaPayment = 67600;
+        int denisPayment = 83690;
+        int kristinaPayment = 76230;
+
+        System.out.println("Машина зарплата после повышения: " + mashaPayment * 1.1 + " рублей. Годовой доход вырос на " + mashaPayment * 0,1);
+
 }
 
