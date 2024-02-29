@@ -88,7 +88,24 @@ public class Main {
         int denisPayment = 83690;
         int kristinaPayment = 76230;
 
-        System.out.println("Машина зарплата после повышения: " + mashaPayment * 1.1 + " рублей. Годовой доход вырос на " + mashaPayment * 0,1);
+        System.out.println("Машина зарплата после повышения: " + Math.round(mashaPayment * 1.1) + " рублей. Годовой доход вырос на: " + mashaPayment * 0.1 + " рублей." );
+        System.out.println("Кристинина зарплата после повышения: " + Math.round(kristinaPayment * 1.1) + " рублей. Годовой доход вырос на: " + kristinaPayment * 0.1 + " рублей." );
+        System.out.println("Денискина зарплата после повышения: " + Math.round(denisPayment * 1.1) + " рублей. Годовой доход вырос на: " + denisPayment * 0.1 + " рублей." );
 
-}
+}public class SalaryIncrease {
+        public static void main(String[] args) {
+
+            // Данные сотрудников
+            String[] employees = {"Маша", "Денис", "Кристина"};
+            int[] currentSalaries = {67760, 83690, 76230};
+
+            // Расчет повышения зарплаты и вывод информации
+            for (int i = 0; i < employees.length; i++) {
+                int newSalary = (int) (currentSalaries[i] * 1.1); // Повышение зарплаты на 10%
+                int annualIncomeIncrease = (newSalary - currentSalaries[i]) * 12; // Разница годового дохода
+
+                System.out.println(employees[i] + " теперь получает " + newSalary + " рублей. Годовой доход вырос на " + annualIncomeIncrease + " рублей.");
+            }
+        }
+    }}
 
